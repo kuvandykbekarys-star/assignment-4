@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --green: #0f6b5f;
+  --yellow: #f2a93b;
+  --ink: #16302b;
+  --background: #f4f7f5;
+  --border: #e6efec;
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav a { color: var(--green); }
+.ticket, .assignment-panel { max-width: 56rem; margin-inline: auto; }
+.ticket { background: white; border-radius: 1.5rem; box-shadow: 0 1.25rem 2.5rem #16302b26; overflow: hidden; }
+.ticket-header { background: var(--green); color: white; padding: 1.75rem 2.5rem; }
+.ticket-header h1 { font-size: 1.75rem; font-weight: 700; margin: 0; }
+.ticket-body { padding: 2.5rem; }
+.ticket .form-control, .ticket .form-select { background-color: var(--background); border-color: #d3e1dc; border-radius: .65rem; }
+.form-label { font-size: .9rem; font-weight: 600; }
+legend.form-label { float: none; width: auto; }
+.form-check-input:checked { background-color: var(--green); border-color: var(--green); }
+.form-check-input:focus, .form-control:focus, .form-select:focus { border-color: var(--green); box-shadow: 0 0 0 .2rem #0f6b5f33; }
+.ticket .input-group-text { background: var(--green); color: white; font-weight: 700; border-color: var(--green); }
+.trip-type .btn { border-color: var(--green); color: var(--green); padding-inline: 1.3rem; font-weight: 600; }
+.trip-type .btn:first-of-type { border-radius: 2rem 0 0 2rem; }
+.trip-type .btn:last-of-type { border-radius: 0 2rem 2rem 0; }
+.trip-type .btn-check:checked + .btn { background: var(--green); border-color: var(--green); color: white; }
+.ticket-actions { display: flex; justify-content: flex-end; gap: .65rem; margin-top: 1.75rem; }
+.ticket-actions .btn { border-radius: 2rem; padding: .75rem 1.75rem; font-weight: 700; }
+.clear-button { border: 1px solid var(--ink); color: var(--ink); }
+.clear-button:hover { background: var(--border); border-color: var(--ink); }
+.find-button { background: var(--yellow); color: var(--ink); }
+.find-button:hover { background: #e69b2c; }
+.assignment-panel { background: white; border: 1px solid var(--border); border-radius: 1rem; padding: 2rem; }
+.assignment-panel h1 { font-weight: 700; margin-bottom: 1rem; }
+.btn-success { --bs-btn-bg: var(--green); --bs-btn-border-color: var(--green); }
+.validation-form :is(input, select, textarea):user-invalid { border-color: #b02a37; }
+.validation-form :is(input, select, textarea):user-valid { border-color: var(--green); }
+.validation-form :is(input, select, textarea):user-invalid ~ .invalid-feedback,
+.experience-group:has(input:user-invalid) > .invalid-feedback { display: block; }
+.validation-form .invalid-feedback { color: #b02a37; }
+.table td, .table th { vertical-align: top; }
+code { overflow-wrap: anywhere; }
+
+@media (max-width: 767.98px) {
+  .ticket-header { padding: 1.25rem; }
+  .ticket-header h1 { font-size: 1.2rem; }
+  .ticket-body { padding: 1.25rem; }
+  .ticket-actions { flex-direction: column-reverse; }
+  .ticket-actions .btn { width: 100%; }
+  .assignment-panel { padding: 1.25rem; }
+}

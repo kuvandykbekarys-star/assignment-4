@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 3 problems</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+  <main class="container py-4 py-md-5">
+    <nav class="mb-4 d-flex flex-wrap gap-3" aria-label="Assignments">
+      <a href="task1.html">Task 1</a>
+      <a href="task2.html">Task 2</a>
+      <a href="task3.html">Task 3</a>
+      <a href="problems.html">Task 3 problems</a>
+    </nav>
+    <section class="assignment-panel">
+      <h1>Task 3: таблица проблем</h1>
+      <p>Номера строк отсчитываются от &lt;h2&gt; на изображении исходного кода в PDF; пустые строки не учитываются. Ошибки относятся к учебному примеру из задания.</p>
+      <p>Обязательность контактных данных, даты, количества гостей, размещения, приёма пищи и согласия — принятые решения для исправленной формы бронирования. Комментарий оставлен необязательным.</p>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead><tr><th>№</th><th>Строки</th><th>Исходный код / проблема</th><th>Почему мешает пользователю</th><th>Исправление</th></tr></thead>
+          <tbody><tr><td>1</td><td>3</td><td>Name: only placeholder</td><td>Подпись исчезает при вводе; поле трудно распознать.</td><td>Добавлен label с for и уникальный id.</td></tr><tr><td>2</td><td>4</td><td>Email: only placeholder</td><td>У поля email нет постоянной связанной подписи.</td><td>Добавлен связанный label.</td></tr><tr><td>3</td><td>4</td><td>Email: type=&quot;text&quot;</td><td>Браузер принимает строку без адреса электронной почты.</td><td>Использован type=&quot;email&quot;.</td></tr><tr><td>4</td><td>5–6</td><td>Phone: label without for</td><td>Нажатие на подпись не фокусирует поле.</td><td>Добавлен for, совпадающий с id. Альтернатива: вложить input в label. Выбрана явная связь, чтобы свободно размещать элементы в сетке.</td></tr><tr><td>5</td><td>6</td><td>Phone: type=&quot;text&quot;</td><td>На телефоне не запрашивается удобная телефонная клавиатура.</td><td>Использован type=&quot;tel&quot;; сам по себе он не проверяет формат номера.</td></tr><tr><td>6</td><td>7–8</td><td>for=&quot;guests&quot;, id=&quot;people&quot;</td><td>Подпись Guests связана с несуществующим id.</td><td>Значения заменены на guests.</td></tr><tr><td>7</td><td>8</td><td>Guests: type=&quot;text&quot;</td><td>Можно ввести буквы, ноль или дробное количество гостей.</td><td>Использованы type=&quot;number&quot;, min=&quot;1&quot;, step=&quot;1&quot;.</td></tr><tr><td>8</td><td>10</td><td>Date: type=&quot;text&quot;</td><td>Неясен формат; возможны несуществующие даты.</td><td>Использован type=&quot;date&quot; с календарём браузера.</td></tr><tr><td>9</td><td>10, 12</td><td>id=&quot;date&quot; used twice</td><td>Идентификатор неоднозначен, связи с подписями ненадёжны.</td><td>Назначены разные id reservation-date и inside.</td></tr><tr><td>10</td><td>12–13</td><td>Different radio names</td><td>Можно выбрать одновременно Inside и Terrace.</td><td>Одинаковое name=&quot;seating&quot; объединяет варианты в одну группу.</td></tr><tr><td>11</td><td>12–13</td><td>Radio text without label</td><td>Текст вариантов не является кликабельной подписью.</td><td>Для каждого варианта добавлен label с for.</td></tr><tr><td>12</td><td>11–13</td><td>Seating group: paragraph</td><td>Группа вариантов не имеет семантического названия.</td><td>Использованы fieldset и legend.</td></tr><tr><td>13</td><td>12–13</td><td>Radio inputs without value</td><td>Сервер получает неясное значение on.</td><td>Добавлены value=&quot;inside&quot; и value=&quot;terrace&quot;.</td></tr><tr><td>14</td><td>14–17</td><td>Select without label</td><td>Назначение списка не объявляется связанной подписью.</td><td>Добавлены label, id и подпись Meal.</td></tr><tr><td>15</td><td>18</td><td>Textarea: only placeholder</td><td>После ввода текста назначение поля не видно.</td><td>Добавлена постоянная связанная подпись Comments.</td></tr><tr><td>16</td><td>19</td><td>Checkbox text without label</td><td>Нельзя переключить согласие нажатием на текст.</td><td>Добавлен label с for и id у checkbox.</td></tr><tr><td>17</td><td>3–10, 14, 18–19</td><td>Controls without name</td><td>Значения большинства полей не отправляются.</td><td>Каждому отправляемому полю назначен name.</td></tr><tr><td>18</td><td>20</td><td>div as Reserve button</td><td>Элемент не отправляет форму и не работает как кнопка с клавиатуры.</td><td>Использован button type=&quot;submit&quot;. Альтернатива: input type=&quot;submit&quot;; button выбран ради удобного оформления содержимого.</td></tr><tr><td>19</td><td>3–20</td><td>No layout or spacing</td><td>Поля расположены неудобно и плохо адаптируются к узкому экрану.</td><td>Применены row, col-md-6, g-3 и классы компонентов Bootstrap.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

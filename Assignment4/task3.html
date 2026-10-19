@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserve a table</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+  <main class="container py-4 py-md-5">
+    <nav class="mb-4 d-flex flex-wrap gap-3" aria-label="Assignments">
+      <a href="task1.html">Task 1</a>
+      <a href="task2.html">Task 2</a>
+      <a href="task3.html">Task 3</a>
+      <a href="problems.html">Task 3 problems</a>
+    </nav>
+    <section class="assignment-panel">
+      <h1>Reserve a table</h1>
+      <form action="task3.html" method="get">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" for="guest-name">Your name</label>
+            <input class="form-control" type="text" id="guest-name" name="guest-name" autocomplete="name" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="guest-email">Email</label>
+            <input class="form-control" type="email" id="guest-email" name="email" autocomplete="email" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="guest-phone">Phone</label>
+            <input class="form-control" type="tel" id="guest-phone" name="phone" autocomplete="tel" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="guests">Guests</label>
+            <input class="form-control" type="number" id="guests" name="guests" min="1" step="1" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="reservation-date">Date</label>
+            <input class="form-control" type="date" id="reservation-date" name="date" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="meal">Meal</label>
+            <select class="form-select" id="meal" name="meal" required>
+              <option value="">Choose a meal</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <fieldset>
+              <legend class="form-label">Seating</legend>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="seating" id="inside" value="inside" required>
+                <label class="form-check-label" for="inside">Inside</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="seating" id="terrace" value="terrace" required>
+                <label class="form-check-label" for="terrace">Terrace</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="comments">Comments (optional)</label>
+            <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="terms" name="terms" value="accepted" required>
+              <label class="form-check-label" for="terms">I agree to the terms</label>
+            </div>
+          </div>
+          <div class="col-12"><button class="btn btn-success" type="submit">Reserve</button></div>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
